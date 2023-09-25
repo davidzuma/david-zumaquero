@@ -1,3 +1,42 @@
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme
+# Project information
+site_name: David Zumaquero
+site_url: https://davidzuma.github.io/
+site_author: David Zumaquero
+site_description: >-
+ My personal web page.
+
+# Repository
+repo_name: davidzuma/davidzumaquero.github.io
+repo_url: https://github.com/davidzuma/davidzumaquero.github.io
+edit_uri: ""
+
+# Configuration
+theme:
+  name: material
+  icon:
+    logo: material/face-man-outline
+  favicon: images/favicon.png
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+
+# Extras
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/davidzuma
+      name: davidzuma on Github
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/davidzuma/
+      name: David Zumaquero Mairena on Linkedin
+  generator: false
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
