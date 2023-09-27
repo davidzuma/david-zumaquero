@@ -2,7 +2,7 @@
 
 
 
-I'm a **Python Developer** who takes new ideas into practice. And I really enjoy it! 😁 I give talks about **Artificial Intelligence** and I'm really interested in **AI, Data and Python** 🦾. About hobbies, chess is my preferred one and I am always ready for a chess game ♟️.
+I'm a **Python Developer** who takes new ideas into practice I'm really interested in **AI, Data and Python** 🦾. About hobbies, chess is my preferred one and I am always ready for a chess game ♟️.
 
 - 🎓 [Education](/background/education)
 - 👷 [Professional Experience](/background/experience)
