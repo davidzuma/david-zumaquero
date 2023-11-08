@@ -1,4 +1,4 @@
-# David Zumaquero Mairena
+# David Zumaquero
 
 
 ### Description
