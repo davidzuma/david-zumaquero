@@ -2,3 +2,5 @@ title: David Zumaquero
 description: Personal web page
 show_downloads: False
 theme: jekyll-theme-slate
+github:
+  is_project_page: false
