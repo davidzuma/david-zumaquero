@@ -4,9 +4,9 @@
 
 I'm a **Python Developer** who loves to leverage data and technology to get insights. I'm really interested in **AI, Data and Python** 🦾. About hobbies, chess is my preferred one and I am always ready for a chess game ♟️.
 
-- 🎓 [Education](/David-Zumaquero/background/education)
-- 👷 [Professional Experience](/David-Zumaquero/background/experience)
-- 🗣️ [Projects](/David-Zumaquero/background/projects)
+- 🎓 [Education](/david-zumaquero/background/education)
+- 👷 [Professional Experience](/david-zumaquero/background/experience)
+- 🗣️ [Projects](/david-zumaquero/background/projects)
 
 ## 🔧 Technologies I work with
 
