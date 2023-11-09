@@ -11,7 +11,7 @@ Here you can find my **main professional roles**.
 <!-- no toc -->
 [**Software Engineer**, PriceWaterHouseCooper](#software-engineer)
 <!-- no toc -->
-[**Data science interships** ](#data-science-interships)
+[**Data science interships** ](##data-science-interships)
 -
 
 
