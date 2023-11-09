@@ -1,11 +1,4 @@
 title: David Zumaquero
-email: zumaquerodavid@gmail.com
 description: Personal web page where you can know me better.
-baseurl: https://davidzuma.github.io
-url: https://davidzuma.github.io/David-Zumaquero/
-github_username:  davidzuma
-
-# Build settings
-markdown: kramdown
+show_downloads: false
 theme: jekyll-theme-minimal
-
