@@ -1,4 +1,4 @@
-# 👋 Hi, I'm David Zumaquero 😃
+# 👋 Hi, I'm David Zumaquero 
 
 
 
