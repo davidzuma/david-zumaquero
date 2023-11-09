@@ -1,7 +1,6 @@
 title: David Zumaquero
 email: zumaquerodavid@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-Personal web page where you can know me better.
+description: Personal web page where you can know me better.
 baseurl: https://davidzuma.github.io
 url: https://davidzuma.github.io/David-Zumaquero/
 github_username:  davidzuma
