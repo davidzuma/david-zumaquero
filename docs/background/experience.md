@@ -6,15 +6,6 @@ With over three years of experience working in consulting firms, I have develope
 I am passionate about using my skills and knowledge to drive innovation and make a positive impact in the tech industry. I am eager to leverage my expertise and contribute to the success of top tech companies and drive meaningful change in the world through data-driven decision making.
 Here you can find my **main professional roles**.
 
-<!-- no toc -->
-[**Data Scientist**, Cathedral Software](#data-scientist)
-<!-- no toc -->
-[**Software Engineer**, PriceWaterHouseCooper](#software-engineer)
-<!-- no toc -->
-[**Data science interships** ](##data-science-interships)
--
-
-
 
 
 ## Data Scientist, Cathedral Software (1/2022 - 9/2023)
