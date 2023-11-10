@@ -7,7 +7,7 @@ Here you can find my **main academic achievements**.
 <!-- no toc -->
 [🎓 **Master** - Mathematics Education](#master-mathematics-education)
 <!-- no toc -->
-[🎓 **BSc** - Matemáticas](#bsc-Mathematics)
+[🎓 **Bachelor** - Mathematics](#bsc-Mathematics)
 
 ## 🎓 **Master** - Mathematics
 <!-- ![UMA](https://upload.wikimedia.org/wikipedia/en/1/1b/Seal_University_of_M%C3%A1laga.png) -->
@@ -25,7 +25,7 @@ Here you can find my **main academic achievements**.
 - **Master Thesis** : **A trigonometric walk**. Implemented a didactic unit to teach trigonometry in a fun way using real life examples. 
 
  
-## 🎓 **BSc** - Mathematics
+## 🎓 **Bachelor** - Mathematics
 
 - **Where**: [University of Málaga](https://www.uma.es) & [Marie Curie University](https://www.umcs.pl/en/)
 - **When**: Sept/**2016** - June/**2020**
