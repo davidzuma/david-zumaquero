@@ -2,12 +2,6 @@
 
 Here you can find my **main academic achievements**. 
 
-<!-- no toc -->
-[🎓 **Master** - Mathematics](#master-mathematics)
-<!-- no toc -->
-[🎓 **Master** - Mathematics Education](#master-mathematics-education)
-<!-- no toc -->
-[🎓 **Bachelor** - Mathematics](#bsc-Mathematics)
 
 ## 🎓 **Master** - Mathematics
 <!-- ![UMA](https://upload.wikimedia.org/wikipedia/en/1/1b/Seal_University_of_M%C3%A1laga.png) -->
