@@ -2,7 +2,7 @@
 
 
 
-I'm a **Python Developer** who loves to leverage data and technology to get insights. I'm really interested in **AI, Data and Python** 🦾. About hobbies, chess is my preferred one and I am always ready for a chess game ♟️.
+I'm a **Python Developer** with a strong math background who wants to make meaningful impact. I love **Maths, AI, Data and Python** 🦾. About hobbies, chess is my preferred one and I am always ready for a chess game ♟️.
 
 - 🎓 [Education](/david-zumaquero/background/education)
 - 👷 [Professional Experience](/david-zumaquero/background/experience)
@@ -35,7 +35,7 @@ I'm a **Python Developer** who loves to leverage data and technology to get insi
 
 
 ## 🔍 Where can you find me?
-
+- 📩 **Email**: [zumaquerodavid@gmail.com](zumaquerodavid@gmail.com)
 - 💻 **Github**: [@davidzuma](https://github.com/davidzuma)
 - 💼 **LinkedIn**: [@davidzuma](https://www.linkedin.com/in/davidzuma/)
 - ♟️ **Lichess**: [@zumaquero](https://lichess.org/@/zumaquero)
