@@ -8,7 +8,7 @@ Here you can find my **main professional roles**.
 
 
 
-## Data Scientist, Cathedral Software (1/2022 - 9/2023)
+## Data Engineer, Cathedral Software (1/2022 - 9/2023)
 During my tenure in Cathedral Software, I was involved in differents roles and tecnologies:
 
 - Tech lead in OCR web application. Responsible of managing tecnologies, building a roadmap and coding a promising MVP. This app takes pdfs and images of invoices, extracts useful information and plots different KPIs and graphs to get insights of the expenses. Backend built with Django and Postgres, image processing with OpenCV and Tesseract, frontend with Streamlit as well as GitLab and Git to VCS.
