@@ -6,9 +6,15 @@ With over three years of experience working in consulting firms, I have develope
 I am passionate about using my skills and knowledge to drive innovation and make a positive impact in the tech industry. I am eager to leverage my expertise and contribute to the success of top tech companies and drive meaningful change in the world through data-driven decision making.
 Here you can find my **main professional roles**.
 
+## AI & Data Engineer, Accenture (Berlin) 2/2024 - Present
 
 
-## Data Engineer, Cathedral Software (1/2022 - 9/2023)
+- Develop power grid data models and ETLs using Azure, Databricks, Spark, Python and Terraform.
+- Conceptualize POC for GenAI Document management. OCR, OpenAI, Python, Streamlit.
+
+
+
+## Data Engineer, Cathedral Software (Málaga) - 1/2022 to 10/2023 
 During my tenure in Cathedral Software, I was involved in differents roles and tecnologies:
 
 - Tech lead in OCR web application. Responsible of managing tecnologies, building a roadmap and coding a promising MVP. This app takes pdfs and images of invoices, extracts useful information and plots different KPIs and graphs to get insights of the expenses. Backend built with Django and Postgres, image processing with OpenCV and Tesseract, frontend with Streamlit as well as GitLab and Git to VCS.
@@ -22,7 +28,7 @@ During my tenure in Cathedral Software, I was involved in differents roles and t
 
 I work on data processing, machine learning algorithms and plotting results in a web application. Main tools used: pandas, scikit-learn, kedro, AirFlow, Django, SQL, plotly (web application development), as well as, docker, kubernetes and GitHub actions (CI/CD).
 
-## Software Engineer, PriceWaterHouseCooper (5/2021 - 1/2022)
+## Software Engineer, PriceWaterHouseCooper (Málaga)  - 5/2021 to 1/2022
 
 
 As a Backend Developer at PwC, I was responsible for developing a high-performance big data web application. My key responsibilities included designing and implementing backend solutions, developing RESTful APIs, and ensuring scalability and reliability of the application.
@@ -30,7 +36,7 @@ As a Backend Developer at PwC, I was responsible for developing a high-performan
 During my tenure, I successfully delivered various features of the application, data processing and data analytics. I worked closely with the frontend team to ensure seamless integration of the backend with the user interface.
 
 
-## Data science internships (10/2020 - 5/2021)
+## Data science internships 10/2020 to 5/2021
 
 - Future Connections: As Data Science intern in Future connection, I was in charge of developing and maintenance a computer vision application highly scalable. The aim of this app is to detect people and cars to avoid crowd or lack of parking in shopping centers or busses. We use the latest technologies and R&D philosophy which fits perfectly with this innovative project.
 
