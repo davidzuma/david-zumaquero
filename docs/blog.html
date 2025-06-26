@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - David Zumaquero</title>
+    <meta name="description" content="Blog and research articles by David Zumaquero - AI Engineer sharing insights on machine learning, mathematics, and technology.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Page-specific styles */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .page-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .blog-section {
+            padding: 5rem 0;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .blog-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+            background: var(--background-alt);
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .blog-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(37, 99, 235, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .blog-card:hover .blog-overlay {
+            opacity: 1;
+        }
+
+        .blog-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .blog-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+
+        .blog-link:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .blog-category {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .blog-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .blog-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .blog-stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--background-alt);
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .read-more:hover {
+            color: var(--primary-dark);
+            transform: translateX(5px);
+        }
+
+        .speaking-section {
+            background: var(--background-alt);
+            padding: 5rem 0;
+        }
+
+        .speaking-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .speaking-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .talk-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .talk-event {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .talk-date {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        .talk-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .talk-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title {
+                font-size: 2.5rem;
+            }
+
+            .blog-stats {
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">David Zumaquero</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-translate="nav-home">Home</a>
+                <a href="blog.html" class="nav-link active" data-translate="nav-blog">Blog</a>
+                <a href="speaking.html" class="nav-link" data-translate="nav-speaking">Speaking</a>
+                <a href="contact.html" class="nav-link" data-translate="nav-contact">Contact</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-toggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">EN</span>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <a href="#" class="lang-option" data-lang="en">English</a>
+                    <a href="#" class="lang-option" data-lang="es">Español</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title" data-translate="blog-title">Blog & Research</h1>
+            <p class="page-subtitle" data-translate="blog-subtitle">Insights on AI, mathematics, and technology</p>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Articles</h2>
+                <p class="section-subtitle">Deep dives into AI research and practical applications</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Neural Networks Article -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="article_neural_networks/images/Disentanglement in Neural Networks.png" alt="Neural Networks Research">
+                        <div class="blog-overlay">
+                            <div class="blog-links">
+                                <a href="https://github.com/davidzuma/Aprendizaje-Automatico-Medidas-De-Enredo" class="blog-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://davidzuma.github.io/aprendizaje-automatico-medidas-de-enredo/" class="blog-link" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-globe"></i>
+                                </a>
+                                <a href="article_neural_networks/index.html" class="blog-link">
+                                    <i class="fas fa-book-open"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="blog-category">Research</div>
+                            <div class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                <span>2022</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="blog-title">Why Do Neural Networks Work?</h3>
+                        <p class="blog-excerpt">
+                            A deep exploration into manifold disentanglement in deep learning, providing mathematical insights 
+                            into how neural networks transform and separate data representations across layers. This research 
+                            bridges the gap between theoretical understanding and practical AI applications.
+                        </p>
+
+                        <div class="blog-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-book"></i>
+                                <span>Research Article</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                <span>20 min read</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-eye"></i>
+                                <span>500+ views</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="tag">Deep Learning</span>
+                            <span class="tag">Mathematics</span>
+                            <span class="tag">Neural Networks</span>
+                            <span class="tag">Manifold Theory</span>
+                        </div>
+
+                        <a href="article_neural_networks/index.html" class="read-more">
+                            Read Full Article
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- AI in Education Article (Placeholder for future content) -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: linear-gradient(135deg, #10b981, #059669); color: white; font-size: 3rem;">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="blog-overlay">
+                            <div class="blog-links">
+                                <a href="#" class="blog-link">
+                                    <i class="fas fa-clock"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="blog-category">AI & Education</div>
+                            <div class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="blog-title">AI-Powered Mathematics Education</h3>
+                        <p class="blog-excerpt">
+                            Exploring how artificial intelligence is revolutionizing mathematics education through personalized 
+                            learning experiences, automated problem solving, and intelligent tutoring systems. Based on 
+                            experiences building the matematicas.top-bot for the matematicas.top YouTube channel.
+                        </p>
+
+                        <div class="blog-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-file-alt"></i>
+                                <span>Article</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                <span>In Progress</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="tag">AI in Education</span>
+                            <span class="tag">LLMs</span>
+                            <span class="tag">Personalized Learning</span>
+                            <span class="tag">Mathematics</span>
+                        </div>
+
+                        <a href="#" class="read-more" style="opacity: 0.6; pointer-events: none;">
+                            Coming Soon
+                            <i class="fas fa-hourglass-half"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- RAG Systems Article (Placeholder for future content) -->
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <div style="display: flex; align-items: center; justify-content: center; height: 100%; background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; font-size: 3rem;">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="blog-overlay">
+                            <div class="blog-links">
+                                <a href="#" class="blog-link">
+                                    <i class="fas fa-clock"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <div class="blog-category">Technical</div>
+                            <div class="blog-date">
+                                <i class="fas fa-calendar"></i>
+                                <span>Coming Soon</span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="blog-title">Building Production-Ready RAG Systems</h3>
+                        <p class="blog-excerpt">
+                            A comprehensive guide to designing, implementing, and deploying Retrieval-Augmented Generation 
+                            systems in production environments. Covering best practices, common pitfalls, and optimization 
+                            strategies based on real-world experience.
+                        </p>
+
+                        <div class="blog-stats">
+                            <div class="stat-item">
+                                <i class="fas fa-code"></i>
+                                <span>Technical Guide</span>
+                            </div>
+                            <div class="stat-item">
+                                <i class="fas fa-clock"></i>
+                                <span>In Progress</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-tags">
+                            <span class="tag">RAG</span>
+                            <span class="tag">LangChain</span>
+                            <span class="tag">Vector Databases</span>
+                            <span class="tag">Production AI</span>
+                        </div>
+
+                        <a href="#" class="read-more" style="opacity: 0.6; pointer-events: none;">
+                            Coming Soon
+                            <i class="fas fa-hourglass-half"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaking Section -->
+    <section class="speaking-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Speaking & Presentations</h2>
+                <p class="section-subtitle">Sharing knowledge through conferences and talks</p>
+            </div>
+
+            <div class="speaking-card">
+                <div class="talk-event">Universidad de Málaga - Máster en Big Data, IA e Ingeniería de Datos</div>
+                <div class="talk-date">
+                    <i class="fas fa-calendar"></i>
+                    May 5, 2025
+                </div>
+                <h3 class="talk-title">Todo lo que necesitas saber para lanzar tu carrera en Ciencia de datos</h3>
+                <p class="talk-description">
+                    Guest lecture delivered to 25 master's students at the University of Málaga's Big Data, Artificial Intelligence, 
+                    and Data Engineering program. The session covered essential career guidance for aspiring data scientists, 
+                    including practical skills, industry insights, and career development strategies. Held at the Ada Byron Research Building.
+                </p>
+                
+                <div class="talk-topics">
+                    <span class="tag">Career Development</span>
+                    <span class="tag">Data Science</span>
+                    <span class="tag">Industry Insights</span>
+                    <span class="tag">Education</span>
+                </div>
+            </div>
+
+            <div class="speaking-card">
+                <div class="talk-event">Mathematical Foundations of AI Conference</div>
+                <div class="talk-date">
+                    <i class="fas fa-calendar"></i>
+                    2022
+                </div>
+                <h3 class="talk-title">Neural Networks and Manifold Disentanglement</h3>
+                <p class="talk-description">
+                    Presented research on how neural networks progressively untangle data across their layers, 
+                    providing insights into the mathematical foundations of deep learning effectiveness. The talk 
+                    explored the geometric perspective on why neural networks are so successful at solving complex 
+                    problems that traditional machine learning approaches struggle with.
+                </p>
+                
+                <div class="talk-topics">
+                    <span class="tag">Deep Learning Theory</span>
+                    <span class="tag">Manifold Learning</span>
+                    <span class="tag">Neural Network Interpretability</span>
+                    <span class="tag">Mathematical Foundations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 David Zumaquero. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:zumaquerodavid@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/davidzuma" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/davidzuma/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/zumaquerodavid" class="social-link">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
