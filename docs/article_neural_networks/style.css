@@ -65,7 +65,19 @@
 /* Image styling */
 .image-container {
     text-align: center;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
+}
+
+.image-row {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1rem 0;
+    align-items: flex-start;
+}
+
+.image-row .image-container {
+    flex: 1;
+    margin: 0;
 }
 
 .example-image {
@@ -83,7 +95,8 @@
 .image-caption {
     font-style: italic;
     color: var(--text-muted);
-    margin-top: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
     font-size: 0.9rem;
 }
 
@@ -128,6 +141,15 @@
     }
     
     .image-container {
-        margin: 1rem 0;
+        margin: 0.75rem 0;
+    }
+    
+    .image-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .image-row .image-container {
+        margin: 0.5rem 0;
     }
 }
