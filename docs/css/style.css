@@ -664,18 +664,40 @@ section {
     margin: 0 auto;
 }
 
-.article-meta {
-    display: flex;
-    gap: 2rem;
-    margin-top: 1rem;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
+/* Article Images */
+.article-content .image-container {
+    margin: 2rem 0;
+    text-align: center;
 }
 
-.meta-item {
+.article-content .example-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 0.5rem;
+}
+
+.article-content .image-caption {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin: 0.5rem 0 0 0;
+    line-height: 1.4;
+}
+
+.article-content .image-row {
     display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.article-content .image-row .image-container {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
 }
 
 /* Bot Image */

@@ -2,42 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" con            <p>
-                We train a 3-layer neural network, with 10 neurons per layer, that achieves 100% accuracy on the training set. Below, we visualise the network's output after applying PCA in the input (training dataset) and after each layer.
-            </p>
-   
-            <div class="image-row">
-                <div class="image-container">
-                    <img src="images/Disentanglement in Neural Networks (1).png" alt="PCA of input and first layer" class="example-image">
-                    <p class="image-caption">PCA projection of the input data and after the first neural network layer.</p>
-                </div>
-
-                <div class="image-container">
-                    <img src="images/Disentanglement in Neural Networks (2).png" alt="PCA of second and third layer" class="example-image">
-                    <p class="image-caption">PCA projection after the second and third neural network layers.</p>
-                </div>
-            </div>evice-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Why Do Neural Networks Work? - David Zumaquero</title>
     <meta name="description" content="Research article exploring manifold disentanglement and the mathematical foundations of neural networks by David Zumaquero.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="../index.html">David Zumaquero</a>
+                <a href="index.html">David Zumaquero</a>
             </div>
             <div class="nav-menu" id="nav-menu">
-                <a href="../index.html" class="nav-link">Home</a>
-                <a href="../blog.html" class="nav-link">Blog</a>
-                <a href="../speaking.html" class="nav-link">Speaking</a>
-                <a href="../contact.html" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="speaking.html" class="nav-link">Speaking</a>
+                <a href="contact.html" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
                 <span class="bar"></span>
@@ -91,10 +76,9 @@
                     <img src="images/Disentanglement in Neural Networks.png" alt="Logistic regression vs neural network on spirals" class="example-image">
                     <p class="image-caption">Logistic regression (left) fails to separate two interwoven spirals, while a neural network (right) succeeds.</p>
                 </div>
-            </div>
-            <p>
-                This power comes with a cost. Neural networks are often seen as black boxes due to their complexity, making it difficult to interpret the success of their results.
-            </p>
+                <p>
+                    This power comes with a cost. Neural networks are often seen as black boxes due to their complexity, making it difficult to interpret the success of their results.
+                </p>
         </section>
 
         <section id="dimensionality-reduction">
@@ -112,14 +96,15 @@
                 We train a 3-layer neural network, with 10 neurons per layer, that achieves 100% accuracy on the training set. Below, we visualise the network’s output after applying PCA in the input (training dataset) and after each layer.
             </p>
    
-            <div class="image-container">
-                <img src="images/Disentanglement in Neural Networks (1).png" alt="PCA of input and first layer" class="example-image">
-                <p class="image-caption">PCA projection of the input data and after the first neural network layer.</p>
-            </div>
-
-            <div class="image-container">
-                <img src="images/Disentanglement in Neural Networks (2).png" alt="PCA of second and third layer" class="example-image">
-                <p class="image-caption">PCA projection after the second and third neural network layers.</p>
+            <div class="image-row">
+                <div class="image-container">
+                    <img src="images/Disentanglement in Neural Networks (1).png" alt="PCA of input and first layer" class="example-image">
+                    <p class="image-caption">PCA projection of the input data and after the first neural network layer.</p>
+                </div>
+                <div class="image-container">
+                    <img src="images/Disentanglement in Neural Networks (2).png" alt="PCA of second and third layer" class="example-image">
+                    <p class="image-caption">PCA projection after the second and third neural network layers.</p>
+                </div>
             </div>
             <p>
                 One might argue that the digits originally exist in a 64-dimensional space (since each image is 8x8 pixels, flattened into a vector of 64 features), and we are reducing this space to just 3 dimensions. However, the amount of lost information is less than 5% (≥ 95% of cumulative explained variance) for both the input and all neural network layers. To understand how PCA and explained variance work, take a look at plotly PCA.
@@ -235,6 +220,6 @@
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
