@@ -185,7 +185,7 @@ const translations = {
         // Hero Section
         'hero-greeting': 'Hi, I\'m',
         'hero-subtitle': 'AI & Data Engineer',
-        'hero-description': 'AI Engineer with 4+ years of experience building Python-based LLM solutions. I hold an MSc in Mathematics and enjoy turning messy data into intelligent, production-ready systems. As a chess player, I enjoy spotting patterns and thinking ahead.',
+        'hero-description': 'AI engineer with 5+ years of experience building Python-based LLM solutions. I hold an MSc in Mathematics and enjoy turning messy data into intelligent, production-ready systems. As a chess player, I enjoy spotting patterns and thinking ahead.',
         'hero-btn-speaking': 'View Speaking',
         'hero-btn-contact': 'Get in Touch',
         
@@ -278,7 +278,7 @@ const translations = {
         // Hero Section
         'hero-greeting': 'Hola, soy',
         'hero-subtitle': 'Ingeniero de IA y Datos',
-        'hero-description': 'Ingeniero de IA con más de 4 años de experiencia desarrollando soluciones LLM en Python. Tengo un MSc en Matemáticas y disfruto convirtiendo datos complejos en sistemas inteligentes y listos para producción. Como jugador de ajedrez, me gusta detectar patrones y pensar con anticipación.',
+        'hero-description': 'Ingeniero de IA con más de 5 años de experiencia desarrollando soluciones LLM en Python. Tengo un MSc en Matemáticas y disfruto convirtiendo datos complejos en sistemas inteligentes y listos para producción. Como jugador de ajedrez, me gusta detectar patrones y pensar con anticipación.',
         'hero-btn-speaking': 'Ver Conferencias',
         'hero-btn-contact': 'Contactar',
         
