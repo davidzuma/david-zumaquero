@@ -222,12 +222,12 @@ const translations = {
         'topic-career': 'Career Development in Data Science',
         'topic-ai': 'AI & Machine Learning Applications',
         'topic-math': 'Mathematical Foundations of AI',
-        'event-title': 'Everything you need to know to launch your career in Data Science',
+        'event-title': 'Working in IT: Tools, Experiences and Learnings',
         'event-location': 'Room B.1.1, Ada Byron Research Building, Málaga',
-        'event-description': 'Guest lecture to 25 master\'s students covering essential career guidance for aspiring data scientists. Topics included practical skills, industry insights, and career development strategies for the Spanish market.',
+        'event-description': 'Guest lecture to 25 master\'s students sharing practical insights about working in the IT industry. Covered essential tools, real-world experiences, and key learnings for building a successful career in technology and data science.',
         'event-topics-title': 'Key Topics Covered:',
-        'event-topic-1': 'Essential technical skills for data science careers',
-        'event-topic-2': 'Industry landscape and job market insights',
+        'event-topic-1': 'Essential tools and technologies in modern IT workflows',
+        'event-topic-2': 'Real-world experiences from industry projects and challenges',
         
         // Blog Page
         'blog-title': 'Blog & Articles',
@@ -315,12 +315,12 @@ const translations = {
         'topic-career': 'Desarrollo de Carrera en Ciencia de Datos',
         'topic-ai': 'Aplicaciones de IA y Aprendizaje Automático',
         'topic-math': 'Fundamentos Matemáticos de la IA',
-        'event-title': 'Todo lo que necesitas saber para lanzar tu carrera en Ciencia de datos',
+        'event-title': 'Trabajar en IT: Herramientas, Experiencias y Aprendizajes',
         'event-location': 'Aula B.1.1, Edificio de Investigación Ada Byron, Málaga',
-        'event-description': 'Conferencia magistral a 25 estudiantes de máster cubriendo orientación esencial de carrera para aspirantes a científicos de datos. Los temas incluyeron habilidades prácticas, perspectivas de la industria y estrategias de desarrollo profesional para el mercado español.',
+        'event-description': 'Conferencia magistral a 25 estudiantes de máster compartiendo perspectivas prácticas sobre trabajar en la industria IT. Cubrió herramientas esenciales, experiencias del mundo real y aprendizajes clave para construir una carrera exitosa en tecnología y ciencia de datos.',
         'event-topics-title': 'Temas Principales Cubiertos:',
-        'event-topic-1': 'Habilidades técnicas esenciales para carreras en ciencia de datos',
-        'event-topic-2': 'Panorama de la industria y perspectivas del mercado laboral',
+        'event-topic-1': 'Herramientas y tecnologías esenciales en flujos de trabajo IT modernos',
+        'event-topic-2': 'Experiencias del mundo real de proyectos y desafíos de la industria',
         
         // Blog Page
         'blog-title': 'Blog y Artículos',
