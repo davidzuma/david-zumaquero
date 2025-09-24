@@ -211,23 +211,7 @@ const translations = {
         'project-description': 'AI mathematics tutor I built for a YouTube education channel',
         'project-btn': 'Learn More',
         
-        // Speaking Page
-        'speaking-title': 'Speaking & Talks',
-        'speaking-subtitle': 'Sharing knowledge about AI, data science, and mathematics through conferences, university lectures, and industry talks.',
-        'speaker-profile-title': 'Speaker Profile',
-        'speaker-profile-description': 'AI Engineer with a mathematical background, sharing insights about the intersection of theory and practice in artificial intelligence. I focus on making complex AI concepts accessible and providing practical career guidance for data science professionals.',
-        'speaker-stat-students': 'Students Reached',
-        'speaker-stat-topics': 'Topics Covered',
-        'speaker-topics-title': 'Speaking Topics',
-        'topic-career': 'Career Development in Data Science',
-        'topic-ai': 'AI & Machine Learning Applications',
-        'topic-math': 'Mathematical Foundations of AI',
-        'event-title': 'Working in IT: Tools, Experiences and Learnings',
-        'event-location': 'Room B.1.1, Ada Byron Research Building, Málaga',
-        'event-description': 'Guest lecture to 25 master\'s students sharing practical insights about working in the IT industry. Covered essential tools, real-world experiences, and key learnings for building a successful career in technology and data science.',
-        'event-topics-title': 'Key Topics Covered:',
-        'event-topic-1': 'Essential tools and technologies in modern IT workflows',
-        'event-topic-2': 'Real-world experiences from industry projects and challenges',
+
         
         // Blog Page
         'blog-title': 'Blog & Articles',
@@ -251,8 +235,7 @@ const translations = {
         'contact-help-subtitle': 'Areas where I\'m available for collaboration',
         'contact-collaboration-title': 'Technical Collaboration',
         'contact-collaboration-desc': 'Open to collaborating on research projects, open-source contributions, and innovative AI applications, especially in education and mathematics.',
-        'contact-speaking-title': 'Speaking & Workshops',
-        'contact-speaking-desc': 'Available for conferences, workshops, and technical presentations on AI, machine learning, neural networks, and the intersection of mathematics and technology.',
+
         'contact-mentoring-title': 'Mentoring',
         'contact-mentoring-desc': 'Supporting aspiring AI engineers and mathematicians through career guidance, technical mentoring, and educational content creation.',
         
@@ -304,23 +287,7 @@ const translations = {
         'project-description': 'Tutor de matemáticas con IA que construí para un canal educativo de YouTube',
         'project-btn': 'Saber Más',
         
-        // Speaking Page
-        'speaking-title': 'Conferencias y Charlas',
-        'speaking-subtitle': 'Compartiendo conocimiento sobre IA, ciencia de datos y matemáticas a través de conferencias, clases universitarias y charlas industriales.',
-        'speaker-profile-title': 'Perfil de Conferenciante',
-        'speaker-profile-description': 'Ingeniero de IA con formación matemática, compartiendo conocimientos sobre la intersección entre teoría y práctica en inteligencia artificial. Me enfoco en hacer accesibles conceptos complejos de IA y proporcionar orientación práctica de carrera para profesionales de ciencia de datos.',
-        'speaker-stat-students': 'Estudiantes Alcanzados',
-        'speaker-stat-topics': 'Temas Cubiertos',
-        'speaker-topics-title': 'Temas de Conferencias',
-        'topic-career': 'Desarrollo de Carrera en Ciencia de Datos',
-        'topic-ai': 'Aplicaciones de IA y Aprendizaje Automático',
-        'topic-math': 'Fundamentos Matemáticos de la IA',
-        'event-title': 'Trabajar en IT: Herramientas, Experiencias y Aprendizajes',
-        'event-location': 'Aula B.1.1, Edificio de Investigación Ada Byron, Málaga',
-        'event-description': 'Conferencia magistral a 25 estudiantes de máster compartiendo perspectivas prácticas sobre trabajar en la industria IT. Cubrió herramientas esenciales, experiencias del mundo real y aprendizajes clave para construir una carrera exitosa en tecnología y ciencia de datos.',
-        'event-topics-title': 'Temas Principales Cubiertos:',
-        'event-topic-1': 'Herramientas y tecnologías esenciales en flujos de trabajo IT modernos',
-        'event-topic-2': 'Experiencias del mundo real de proyectos y desafíos de la industria',
+
         
         // Blog Page
         'blog-title': 'Blog y Artículos',
@@ -344,8 +311,7 @@ const translations = {
         'contact-help-subtitle': 'Áreas donde estoy disponible para colaboración',
         'contact-collaboration-title': 'Colaboración Técnica',
         'contact-collaboration-desc': 'Abierto a colaborar en proyectos de investigación, contribuciones de código abierto y aplicaciones innovadoras de IA, especialmente en educación y matemáticas.',
-        'contact-speaking-title': 'Conferencias y Talleres',
-        'contact-speaking-desc': 'Disponible para conferencias, talleres y presentaciones técnicas sobre IA, aprendizaje automático, redes neuronales y la intersección de matemáticas y tecnología.',
+
         'contact-mentoring-title': 'Mentoría',
         'contact-mentoring-desc': 'Apoyando a aspirantes a ingenieros de IA y matemáticos a través de orientación profesional, mentoría técnica y creación de contenido educativo.',
         
