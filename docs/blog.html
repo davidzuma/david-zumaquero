@@ -5,202 +5,159 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - David Zumaquero</title>
     <meta name="description" content="Blog and research articles by David Zumaquero - AI Engineer sharing insights on machine learning, mathematics, and technology.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="speaking.html">
+    <link rel="prefetch" href="book-a-call.html">
     <style>
         /* Page-specific styles */
         .page-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 120px 0 60px;
-            text-align: center;
+            padding: calc(60px + var(--spacing-lg)) 0 var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .page-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
         .page-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 680px;
         }
 
         .blog-section {
-            padding: 5rem 0;
+            padding: var(--spacing-lg) 0;
         }
 
         .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
         }
 
         .blog-card {
-            background: white;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
         }
 
-        .blog-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--card-shadow-hover);
+        .blog-card:last-child {
+            border-bottom: none;
         }
 
         .blog-image {
-            position: relative;
-            height: 250px;
-            overflow: hidden;
-            background: var(--background-alt);
-        }
-
-        .blog-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
+            display: none;
         }
 
         .blog-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(37, 99, 235, 0.9);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .blog-card:hover .blog-overlay {
-            opacity: 1;
+            display: none;
         }
 
         .blog-links {
             display: flex;
-            gap: 1rem;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-sm);
         }
 
         .blog-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid white;
-            border-radius: 50%;
-            color: white;
+            color: var(--text-muted);
             text-decoration: none;
+            font-size: 0.875rem;
             transition: var(--transition);
-            backdrop-filter: blur(10px);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
         }
 
         .blog-link:hover {
-            background: white;
-            color: var(--primary-color);
-            transform: scale(1.1);
+            color: var(--text-primary);
         }
 
         .blog-content {
-            padding: 2rem;
+            padding: 0;
         }
 
         .blog-meta {
             display: flex;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.875rem;
             color: var(--text-muted);
         }
 
         .blog-category {
-            background: var(--primary-color);
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            color: var(--text-primary);
             font-weight: 500;
         }
 
         .blog-date {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.25rem;
         }
 
         .blog-title {
-            font-size: 1.5rem;
+            font-size: 1.125rem;
             font-weight: 600;
             color: var(--text-primary);
-            margin-bottom: 1rem;
-            line-height: 1.3;
+            margin-bottom: var(--spacing-xs);
+            letter-spacing: -0.01em;
+        }
+
+        .blog-title a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .blog-title a:hover {
+            color: var(--text-secondary);
         }
 
         .blog-excerpt {
             color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
+            margin-bottom: var(--spacing-sm);
+            line-height: 1.65;
+            font-size: 0.9375rem;
         }
 
         .blog-stats {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding: 1rem;
-            background: var(--background-alt);
-            border-radius: 8px;
-            font-size: 0.9rem;
+            display: none;
         }
 
         .stat-item {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-secondary);
+            display: none;
         }
 
         .read-more {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-color);
+            color: var(--text-primary);
             text-decoration: none;
-            font-weight: 500;
+            font-size: 0.875rem;
             transition: var(--transition);
+            display: inline-block;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1px;
         }
 
         .read-more:hover {
-            color: var(--primary-dark);
-            transform: translateX(5px);
+            border-bottom-color: var(--text-primary);
         }
 
         @media (max-width: 768px) {
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-
             .page-title {
-                font-size: 2.5rem;
-            }
-
-            .blog-stats {
-                flex-direction: column;
-                gap: 0.5rem;
-                align-items: flex-start;
+                font-size: 1.5rem;
             }
         }
     </style>
@@ -216,7 +173,7 @@
                 <a href="index.html" class="nav-link" data-translate="nav-home">Home</a>
                 <a href="blog.html" class="nav-link active" data-translate="nav-blog">Blog</a>
                 <a href="speaking.html" class="nav-link" data-translate="nav-speaking">Speaking</a>
-                <a href="contact.html" class="nav-link" data-translate="nav-contact">Contact</a>
+                <a href="book-a-call.html" class="nav-link" data-translate="nav-book">Book a Call</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-toggle">
@@ -239,82 +196,52 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title" data-translate="blog-title">Blog & Research</h1>
-            <p class="page-subtitle" data-translate="blog-subtitle">Insights on AI, mathematics, and technology</p>
+            <div class="header-content">
+                <h1 class="page-title" data-translate="blog-title">Writing</h1>
+                <p class="page-subtitle" data-translate="blog-subtitle">Research and insights on AI, mathematics, and technology</p>
+            </div>
         </div>
     </section>
 
     <!-- Blog Section -->
     <section class="blog-section">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Articles</h2>
-                <p class="section-subtitle">Deep dives into AI research and practical applications</p>
-            </div>
 
             <div class="blog-grid">
                 <!-- Neural Networks Article -->
-                <div class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/Disentanglement in Neural Networks.png" alt="Neural Networks Research">
-                        <div class="blog-overlay">
-                            <div class="blog-links">
-                                <a href="https://github.com/davidzuma/Aprendizaje-Automatico-Medidas-De-Enredo" class="blog-link" target="_blank" rel="noopener noreferrer">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://davidzuma.github.io/aprendizaje-automatico-medidas-de-enredo/" class="blog-link" target="_blank" rel="noopener noreferrer">
-                                    <i class="fas fa-globe"></i>
-                                </a>
-                                <a href="neural-networks-article.html" class="blog-link">
-                                    <i class="fas fa-book-open"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <article class="blog-card">
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <div class="blog-category">Research</div>
-                            <div class="blog-date">
-                                <i class="fas fa-calendar"></i>
-                                <span>2022</span>
-                            </div>
+                            <span class="blog-category" data-translate="blog-article-category">Research</span>
+                            <span class="blog-date" data-translate="blog-article-date">2022</span>
                         </div>
                         
-                        <h3 class="blog-title">Why Do Neural Networks Work?</h3>
-                        <p class="blog-excerpt">
+                        <h3 class="blog-title"><a href="neural-networks-article.html" data-translate="blog-article-title">Why Do Neural Networks Work?</a></h3>
+                        <p class="blog-excerpt" data-translate="blog-article-excerpt">
                             A deep exploration into manifold disentanglement in deep learning, providing mathematical insights 
-                            into how neural networks transform and separate data representations across layers. This research 
-                            bridges the gap between theoretical understanding and practical AI applications.
+                            into how neural networks transform and separate data representations across layers.
                         </p>
 
-                        <div class="blog-stats">
-                            <div class="stat-item">
-                                <i class="fas fa-book"></i>
-                                <span>Research Article</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-clock"></i>
-                                <span>20 min read</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-eye"></i>
-                                <span>500+ views</span>
-                            </div>
-                        </div>
-
                         <div class="skill-tags">
-                            <span class="tag">Deep Learning</span>
-                            <span class="tag">Mathematics</span>
-                            <span class="tag">Neural Networks</span>
-                            <span class="tag">Manifold Theory</span>
+                            <span class="tag" data-translate="tag-dl">Deep Learning</span>
+                            <span class="tag" data-translate="tag-math">Mathematics</span>
+                            <span class="tag" data-translate="tag-nn">Neural Networks</span>
+                            <span class="tag" data-translate="tag-manifold">Manifold Theory</span>
                         </div>
 
-                        <a href="neural-networks-article.html" class="read-more">
-                            Read Full Article
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
+                        <div class="blog-links">
+                            <a href="neural-networks-article.html" class="read-more" data-translate="blog-read-more">Read article</a>
+                            <span style="color: var(--text-muted);">·</span>
+                            <a href="https://github.com/davidzuma/Aprendizaje-Automatico-Medidas-De-Enredo" class="blog-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-github"></i> <span data-translate="blog-code">Code</span>
+                            </a>
+                            <span style="color: var(--text-muted);">·</span>
+                            <a href="https://davidzuma.github.io/aprendizaje-automatico-medidas-de-enredo/" class="blog-link" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-globe"></i> <span data-translate="blog-website">Website</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                </article>
 
                 <!-- AI in Education Article (Placeholder for future content) -->
                 <!-- 

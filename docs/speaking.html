@@ -5,11 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speaking & Talks - David Zumaquero</title>
     <meta name="description" content="Speaking engagements, conferences, and talks by David Zumaquero on AI, data science, and mathematics.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="blog.html">
+    <link rel="prefetch" href="book-a-call.html">
+    <style>
+        /* Page-specific styles */
+        .page-header {
+            padding: calc(60px + var(--spacing-lg)) 0 var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .page-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+        }
+
+        .speaking-section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .speaking-grid {
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-lg);
+        }
+
+        .speaking-card {
+            padding: var(--spacing-lg) 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .speaking-card:last-child {
+            border-bottom: none;
+        }
+
+        .speaking-meta {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-sm);
+            font-size: 0.875rem;
+        }
+
+        .speaking-category {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .speaking-date {
+            color: var(--text-muted);
+        }
+
+        .speaking-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: -0.01em;
+        }
+
+        .speaking-venue {
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-sm);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .speaking-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .speaking-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border-color);
+            transition: border-color 0.2s;
+            font-size: 0.875rem;
+        }
+
+        .speaking-link:hover {
+            border-bottom-color: var(--text-primary);
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -22,7 +118,7 @@
                 <a href="index.html" class="nav-link" data-translate="nav-home">Home</a>
                 <a href="blog.html" class="nav-link" data-translate="nav-blog">Blog</a>
                 <a href="speaking.html" class="nav-link active" data-translate="nav-speaking">Speaking</a>
-                <a href="contact.html" class="nav-link" data-translate="nav-contact">Contact</a>
+                <a href="book-a-call.html" class="nav-link" data-translate="nav-book">Book a Call</a>
             </div>
             <div class="language-selector">
                 <button class="lang-btn" id="lang-toggle">
@@ -46,179 +142,44 @@
     <section class="page-header">
         <div class="container">
             <div class="header-content">
-                <h1 class="page-title" data-translate="speaking-title">Speaking & Talks</h1>
+                <h1 class="page-title" data-translate="speaking-title">Speaking</h1>
                 <p class="page-subtitle" data-translate="speaking-subtitle">
-                    Sharing knowledge about AI, data science, and mathematics through conferences, 
-                    university lectures, and industry talks.
+                    Talks and lectures on AI, data science, and career development
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Speaker Profile Section -->
-    <section class="speaker-profile">
+    <!-- Speaking Section -->
+    <section class="speaking-section">
         <div class="container">
-            <div class="profile-content">
-                <div class="profile-text">
-                    <h2 class="section-title" data-translate="speaker-profile-title">Speaker Profile</h2>
-                    <p data-translate="speaker-profile-description">
-                        AI Engineer with a mathematical background, sharing insights about the intersection of theory 
-                        and practice in artificial intelligence. I focus on making complex AI concepts accessible 
-                        and providing practical career guidance for data science professionals.
-                    </p>
-                    <div class="speaker-stats">
-                        <div class="stat">
-                            <div class="stat-number">1</div>
-                            <div class="stat-label" data-translate="stat-speaking">Speaking Event</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">25</div>
-                            <div class="stat-label" data-translate="speaker-stat-students">Students Reached</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label" data-translate="speaker-stat-topics">Topics Covered</div>
-                        </div>
-                    </div>
-                    <div class="speaker-topics">
-                        <h3 data-translate="speaker-topics-title">Speaking Topics</h3>
-                        <div class="topics-grid">
-                            <div class="topic-item">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span data-translate="topic-career">Career Development in Data Science</span>
-                            </div>
-                            <div class="topic-item">
-                                <i class="fas fa-brain"></i>
-                                <span data-translate="topic-ai">AI & Machine Learning Applications</span>
-                            </div>
-                            <div class="topic-item">
-                                <i class="fas fa-calculator"></i>
-                                <span data-translate="topic-math">Mathematical Foundations of AI</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="profile-image">
-                    <img src="assets/speaker_uma.jpg" alt="David Zumaquero speaking at University of Málaga" class="speaker-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Speaking Events Section -->
-    <section class="speaking-events">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Speaking Engagements</h2>
-                <p class="section-subtitle">Recent talks and presentations</p>
-            </div>
-
-            <div class="events-timeline">
+            <div class="speaking-grid">
                 <!-- University of Málaga Talk -->
-                <div class="event-card featured">
-                    <div class="event-date">
-                        <div class="date-badge">
-                            <span class="month">May</span>
-                            <span class="day">5</span>
-                            <span class="year">2025</span>
-                        </div>
+                <article class="speaking-card">
+                    <div class="speaking-meta">
+                        <span class="speaking-category" data-translate="speaking-category">University Lecture</span>
+                        <span class="speaking-date" data-translate="speaking-date">May 2025</span>
                     </div>
-                    <div class="event-content">
-                        <div class="event-venue">
-                            <i class="fas fa-university"></i>
-                            Universidad de Málaga - Máster en Big Data, IA e Ingeniería de Datos
-                        </div>
-                        <h3 class="event-title" data-translate="event-title">Trabajar en IT: Herramientas, Experiencias y Aprendizajes</h3>
-                        <div class="event-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span data-translate="event-location">Aula B.1.1, Edificio de Investigación Ada Byron, Málaga</span>
-                        </div>
-                        <p class="event-description" data-translate="event-description">
-                            Guest lecture to 25 master's students sharing practical insights about working in the IT industry. 
-                            Covered essential tools, real-world experiences, and key learnings for building a successful 
-                            career in technology and data science.
-                        </p>
-                        
-                        <div class="event-highlights">
-                            <h4 data-translate="event-topics-title">Key Topics Covered:</h4>
-                            <ul>
-                                <li data-translate="event-topic-1">Essential tools and technologies in modern IT workflows</li>
-                                <li data-translate="event-topic-2">Real-world experiences from industry projects and challenges</li>
-                                <li>Lessons learned from working with data science and AI teams</li>
-                                <li>Best practices for collaboration and project management in tech</li>
-                                <li>Career growth strategies and continuous learning in IT</li>
-                            </ul>
-                        </div>
-
-                        <div class="event-stats">
-                            <div class="stat-item">
-                                <i class="fas fa-users"></i>
-                                <span>25 Students</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-clock"></i>
-                                <span>2 Hours</span>
-                            </div>
-                            <div class="stat-item">
-                                <i class="fas fa-language"></i>
-                                <span>Spanish</span>
-                            </div>
-                        </div>
-
-                        <div class="event-tags">
-                            <span class="tag">IT Industry</span>
-                            <span class="tag">Tools & Technologies</span>
-                            <span class="tag">Real-world Experiences</span>
-                            <span class="tag">Career Lessons</span>
-                            <span class="tag">University Lecture</span>
-                        </div>
+                    
+                    <h3 class="speaking-title" data-translate="speaking-talk-title">Trabajar en IT: Herramientas, Experiencias y Aprendizajes</h3>
+                    
+                    <div class="speaking-venue">
+                        <i class="fas fa-university"></i>
+                        <span data-translate="speaking-venue">Universidad de Málaga - Máster en Big Data, IA e Ingeniería de Datos</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Speaking Inquiry Section -->
-    <section class="speaking-inquiry">
-        <div class="container">
-            <div class="inquiry-content">
-                <div class="inquiry-text">
-                    <h2>Interested in Having Me Speak?</h2>
-                    <p>
-                        I'm available for speaking engagements at conferences, universities, and corporate events. 
-                        I can tailor presentations to your audience's needs, covering topics from technical AI 
-                        implementation to career development in data science.
+                    <p class="speaking-description" data-translate="speaking-description">
+                        Guest lecture to 25 master's students sharing practical insights about working in IT. 
+                        Covered essential tools, real-world experiences, and career lessons for building a successful career in data science.
                     </p>
-                    <div class="speaking-formats">
-                        <div class="format-item">
-                            <i class="fas fa-microphone"></i>
-                            <span>Keynote Presentations</span>
-                        </div>
-                        <div class="format-item">
-                            <i class="fas fa-chalkboard-teacher"></i>
-                            <span>Technical Workshops</span>
-                        </div>
-                        <div class="format-item">
-                            <i class="fas fa-users"></i>
-                            <span>Panel Discussions</span>
-                        </div>
-                        <div class="format-item">
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>University Lectures</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="inquiry-cta">
-                    <a href="contact.html" class="btn btn-primary">
-                        <i class="fas fa-envelope"></i>
-                        Book a Speaking Engagement
+
+                    <a href="https://www.bigdata.uma.es/agradecimiento-especial-a-david-zumaquero-por-su-inspiradora-charla/" target="_blank" rel="noopener noreferrer" class="speaking-link" data-translate="speaking-link">
+                        Read more about this talk →
                     </a>
-                </div>
+                </article>
             </div>
         </div>
-    </section>
-
-    <!-- Footer -->
+    </section>    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

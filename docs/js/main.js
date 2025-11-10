@@ -32,8 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
     anchorLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
             const targetId = this.getAttribute('href');
+            if (targetId === '#') return; // Skip empty hash links
+            
+            e.preventDefault();
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
@@ -46,43 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Navbar background on scroll
+    // Navbar border on scroll - throttled for performance
     const navbar = document.querySelector('.navbar');
     if (navbar) {
+        let ticking = false;
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-                navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-            } else {
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-                navbar.style.boxShadow = 'none';
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    if (window.scrollY > 50) {
+                        navbar.style.borderBottomColor = '#d1d5db';
+                    } else {
+                        navbar.style.borderBottomColor = '#e5e7eb';
+                    }
+                    ticking = false;
+                });
+                ticking = true;
             }
-        });
+        }, { passive: true });
     }
-
-    // Intersection Observer for animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.skill-category, .project-card, .stat');
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
 
     // Add active state to navigation based on current page
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -99,7 +82,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Language Switcher
     const langToggle = document.getElementById('lang-toggle');
     const langDropdown = document.getElementById('lang-dropdown');
-    const currentLang = document.getElementById('current-lang');
 
     if (langToggle && langDropdown) {
         // Toggle dropdown
@@ -159,19 +141,7 @@ function copyEmail() {
     });
 }
 
-// Add scroll reveal animation for hero elements
-function initScrollReveal() {
-    const heroElements = document.querySelectorAll('.hero-text > *');
-    heroElements.forEach((element, index) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        element.style.animation = `fadeInUp 0.6s ease-out forwards`;
-        element.style.animationDelay = `${index * 0.1}s`;
-    });
-}
-
-// Initialize scroll reveal when page loads
-document.addEventListener('DOMContentLoaded', initScrollReveal);
+// Removed scroll reveal animations for minimalistic approach
 
 // Language translations
 const translations = {
@@ -180,12 +150,12 @@ const translations = {
         'nav-home': 'Home',
         'nav-blog': 'Blog',
         'nav-speaking': 'Speaking',
-        'nav-contact': 'Contact',
+        'nav-book': 'Book a Call',
         
         // Hero Section
         'hero-greeting': 'Hi, I\'m',
         'hero-subtitle': 'AI & Data Engineer',
-        'hero-description': 'AI engineer with 5+ years of experience building Python-based LLM solutions. I hold an MSc in Mathematics and enjoy turning messy data into intelligent, production-ready systems. As a chess player, I enjoy spotting patterns and thinking ahead.',
+        'hero-description': 'I build AI systems with Python. Currently working as a freelance AI engineer on LLM applications and data pipelines. I have a math background and like chess. Sometimes I write about neural networks and speak at events.',
         'hero-btn-speaking': 'View Speaking',
         'hero-btn-contact': 'Get in Touch',
         
@@ -216,6 +186,27 @@ const translations = {
         // Blog Page
         'blog-title': 'Blog & Articles',
         'blog-subtitle': 'Insights into AI, mathematics, and technology',
+        'blog-article-category': 'Research',
+        'blog-article-date': '2022',
+        'blog-article-title': 'Why Do Neural Networks Work?',
+        'blog-article-excerpt': 'A deep exploration into manifold disentanglement in deep learning, providing mathematical insights into how neural networks transform and separate data representations across layers.',
+        'tag-dl': 'Deep Learning',
+        'tag-math': 'Mathematics',
+        'tag-nn': 'Neural Networks',
+        'tag-manifold': 'Manifold Theory',
+        'blog-read-more': 'Read article',
+        'blog-code': 'Code',
+        'blog-website': 'Website',
+        
+        // Speaking Page
+        'speaking-title': 'Speaking',
+        'speaking-subtitle': 'Talks and lectures on AI, data science, and career development',
+        'speaking-category': 'University Lecture',
+        'speaking-date': 'May 2025',
+        'speaking-talk-title': 'Trabajar en IT: Herramientas, Experiencias y Aprendizajes',
+        'speaking-venue': 'Universidad de Málaga - Máster en Big Data, IA e Ingeniería de Datos',
+        'speaking-description': 'Guest lecture to 25 master\'s students sharing practical insights about working in IT. Covered essential tools, real-world experiences, and career lessons for building a successful career in data science.',
+        'speaking-link': 'Read more about this talk →',
         
         // Contact Page
         'contact-title': 'Get in Touch',
@@ -239,6 +230,12 @@ const translations = {
         'contact-mentoring-title': 'Mentoring',
         'contact-mentoring-desc': 'Supporting aspiring AI engineers and mathematicians through career guidance, technical mentoring, and educational content creation.',
         
+        // Book a Call Page
+        'book-title': 'Book a Call',
+        'book-subtitle': 'Let\'s discuss AI projects, collaborations, or speaking opportunities',
+        'book-intro-title': 'Let\'s Talk',
+        'book-intro-desc': 'Schedule a free call to discuss AI & LLM consulting, RAG systems, GenAI applications, data pipelines, speaking opportunities, or technical mentoring.',
+        
         // Mathbot Demo Page
         'mathbot-subtitle': 'AI-powered mathematics tutoring chatbot',
         'mathbot-about-title': 'About the Bot',
@@ -256,12 +253,12 @@ const translations = {
         'nav-home': 'Inicio',
         'nav-blog': 'Blog',
         'nav-speaking': 'Conferencias',
-        'nav-contact': 'Contacto',
+        'nav-book': 'Reservar Llamada',
         
         // Hero Section
         'hero-greeting': 'Hola, soy',
         'hero-subtitle': 'Ingeniero de IA y Datos',
-        'hero-description': 'Ingeniero de IA con más de 5 años de experiencia desarrollando soluciones LLM en Python. Tengo un MSc en Matemáticas y disfruto convirtiendo datos complejos en sistemas inteligentes y listos para producción. Como jugador de ajedrez, me gusta detectar patrones y pensar con anticipación.',
+        'hero-description': 'Construyo sistemas de IA con Python. Actualmente trabajo como ingeniero de IA freelance en aplicaciones LLM y pipelines de datos. Tengo formación en matemáticas y me gusta el ajedrez. A veces escribo sobre redes neuronales y doy conferencias.',
         'hero-btn-speaking': 'Ver Conferencias',
         'hero-btn-contact': 'Contactar',
         
@@ -292,6 +289,27 @@ const translations = {
         // Blog Page
         'blog-title': 'Blog y Artículos',
         'blog-subtitle': 'Perspectivas sobre IA, matemáticas y tecnología',
+        'blog-article-category': 'Investigación',
+        'blog-article-date': '2022',
+        'blog-article-title': '¿Por Qué Funcionan las Redes Neuronales?',
+        'blog-article-excerpt': 'Una exploración profunda sobre el desenredamiento de variedades en aprendizaje profundo, proporcionando perspectivas matemáticas sobre cómo las redes neuronales transforman y separan representaciones de datos a través de las capas.',
+        'tag-dl': 'Aprendizaje Profundo',
+        'tag-math': 'Matemáticas',
+        'tag-nn': 'Redes Neuronales',
+        'tag-manifold': 'Teoría de Variedades',
+        'blog-read-more': 'Leer artículo',
+        'blog-code': 'Código',
+        'blog-website': 'Sitio Web',
+        
+        // Speaking Page
+        'speaking-title': 'Conferencias',
+        'speaking-subtitle': 'Charlas y conferencias sobre IA, ciencia de datos y desarrollo profesional',
+        'speaking-category': 'Conferencia Universitaria',
+        'speaking-date': 'Mayo 2025',
+        'speaking-talk-title': 'Trabajar en IT: Herramientas, Experiencias y Aprendizajes',
+        'speaking-venue': 'Universidad de Málaga - Máster en Big Data, IA e Ingeniería de Datos',
+        'speaking-description': 'Conferencia para 25 estudiantes de máster compartiendo ideas prácticas sobre trabajar en IT. Cubrí herramientas esenciales, experiencias del mundo real y lecciones profesionales para construir una carrera exitosa en ciencia de datos.',
+        'speaking-link': 'Leer más sobre esta charla →',
         
         // Contact Page
         'contact-title': 'Contáctame',
@@ -314,6 +332,12 @@ const translations = {
 
         'contact-mentoring-title': 'Mentoría',
         'contact-mentoring-desc': 'Apoyando a aspirantes a ingenieros de IA y matemáticos a través de orientación profesional, mentoría técnica y creación de contenido educativo.',
+        
+        // Book a Call Page
+        'book-title': 'Reservar Llamada',
+        'book-subtitle': 'Hablemos sobre proyectos de IA, colaboraciones u oportunidades de conferencias',
+        'book-intro-title': 'Hablemos',
+        'book-intro-desc': 'Programa una llamada gratuita para discutir consultoría de IA y LLM, sistemas RAG, aplicaciones GenAI, pipelines de datos, oportunidades de conferencias o mentoría técnica.',
         
         // Mathbot Demo Page
         'mathbot-subtitle': 'Chatbot de tutoría de matemáticas con IA',
@@ -348,7 +372,3 @@ function switchLanguage(lang) {
         }
     });
 }
-
-// Load saved language preference
-const savedLang = localStorage.getItem('preferred-language') || 'en';
-switchLanguage(savedLang);

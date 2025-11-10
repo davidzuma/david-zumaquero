@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Call - David Zumaquero</title>
+    <meta name="description" content="Schedule a call with David Zumaquero to discuss AI projects, collaborations, or speaking opportunities.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="blog.html">
+    <link rel="prefetch" href="speaking.html">
+    <style>
+        /* Page-specific styles */
+        .page-header {
+            padding: calc(60px + var(--spacing-lg)) 0 var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .page-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .page-subtitle {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 680px;
+        }
+
+        .call-section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        .call-content {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .call-header {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-xl);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .call-profile-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+            flex-shrink: 0;
+        }
+
+        .call-intro {
+            flex: 1;
+        }
+
+        .call-intro h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .call-intro p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.9375rem;
+        }
+
+        .calendly-container {
+            width: 100%;
+            min-height: 700px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        @media (max-width: 768px) {
+            .call-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .calendly-container {
+                min-height: 900px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">David Zumaquero</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link" data-translate="nav-home">Home</a>
+                <a href="blog.html" class="nav-link" data-translate="nav-blog">Blog</a>
+                <a href="speaking.html" class="nav-link" data-translate="nav-speaking">Speaking</a>
+                <a href="book-a-call.html" class="nav-link active" data-translate="nav-book">Book a Call</a>
+            </div>
+            <div class="language-selector">
+                <button class="lang-btn" id="lang-toggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="current-lang">EN</span>
+                </button>
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <a href="#" class="lang-option" data-lang="en">English</a>
+                    <a href="#" class="lang-option" data-lang="es">Español</a>
+                </div>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="page-title" data-translate="book-title">Book a Call</h1>
+                <p class="page-subtitle" data-translate="book-subtitle">Let's discuss AI projects, collaborations, or speaking opportunities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call Section -->
+    <section class="call-section">
+        <div class="container">
+            <div class="call-content">
+                <div class="call-header">
+                    <img src="assets/profile.JPG" alt="David Zumaquero" class="call-profile-image">
+                    <div class="call-intro">
+                        <h2 data-translate="book-intro-title">Let's Talk</h2>
+                        <p data-translate="book-intro-desc">Schedule a free call to discuss AI & LLM consulting, RAG systems, GenAI applications, data pipelines, speaking opportunities, or technical mentoring.</p>
+                    </div>
+                </div>
+
+                <div class="calendly-container">
+                    <iframe 
+                        src="https://calendly.com/zumaquerodavid/let-s-talk" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0"
+                        style="min-height: 700px;">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 David Zumaquero. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:zumaquerodavid@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://github.com/davidzuma" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/davidzuma/" class="social-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://x.com/zumaquerodavid" class="social-link">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

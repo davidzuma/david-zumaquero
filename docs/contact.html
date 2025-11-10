@@ -4,307 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - David Zumaquero</title>
-    <meta name="description" content="Get in touch with David Zumaquero - AI Engineer available for collaboration and speaking opportunities.">
+    <meta name="description" content="Get in touch with David Zumaquero.">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="prefetch" href="index.html">
+    <link rel="prefetch" href="blog.html">
+    <link rel="prefetch" href="speaking.html">
     <style>
         /* Page-specific styles */
         .page-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            color: white;
-            padding: 120px 0 60px;
-            text-align: center;
+            padding: calc(60px + var(--spacing-lg)) 0 var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .page-title {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
         .page-subtitle {
-            font-size: 1.25rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1rem;
+            color: var(--text-secondary);
+            max-width: 680px;
         }
 
         .contact-section {
-            padding: 5rem 0;
+            padding: var(--spacing-lg) 0;
         }
 
         .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: start;
+            max-width: 680px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xl);
+        }
+
+        .help-section {
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .help-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            letter-spacing: -0.01em;
+        }
+
+        .help-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .help-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 var(--spacing-md) 0;
+        }
+
+        .help-section li {
+            color: var(--text-secondary);
+            padding: var(--spacing-xs) 0;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 1.25rem;
+        }
+
+        .help-section li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--text-primary);
+            font-weight: 500;
         }
 
         .contact-info {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
         }
 
         .contact-item {
             display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .contact-item:last-child {
-            border-bottom: none;
-        }
-
-        .contact-icon {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-details h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.25rem;
-        }
-
-        .contact-details p {
-            color: var(--text-secondary);
-            margin: 0;
-        }
-
-        .contact-details a {
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .contact-details a:hover {
-            color: var(--primary-dark);
-        }
-
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--card-shadow);
-        }
-
-        .contact-method {
-            display: flex;
-            gap: 1.5rem;
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .contact-method:last-child {
-            border-bottom: none;
-        }
-
-        .method-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-
-        .method-content {
-            flex: 1;
-        }
-
-        .method-content h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .method-content p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .contact-method-btn {
-            display: inline-flex;
-            align-items: center;
+            flex-direction: column;
             gap: 0.5rem;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: var(--transition);
-            margin-bottom: 1rem;
         }
 
-        .contact-method-btn:hover {
-            background: var(--primary-dark);
-            transform: translateY(-2px);
+        .contact-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
         }
 
-        .calendly-btn {
-            background: linear-gradient(135deg, #00a2ff, #0080e7);
+        .contact-value {
+            font-size: 1rem;
         }
 
-        .calendly-btn:hover {
-            background: linear-gradient(135deg, #0080e7, #0066cc);
-        }
-
-        .email-display {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--background-alt);
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .email-display code {
-            font-family: 'Courier New', monospace;
+        .contact-value a {
             color: var(--text-primary);
-            font-size: 0.9rem;
-            flex: 1;
-        }
-
-        .copy-btn {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            padding: 0.25rem;
-            border-radius: 4px;
-            transition: var(--transition);
-        }
-
-        .copy-btn:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        .availability-section {
-            background: var(--background-alt);
-            padding: 5rem 0;
-        }
-
-        .availability-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .availability-card {
-            background: white;
-            padding: 2rem;
-            border-radius: var(--border-radius);
-            box-shadow: var(--card-shadow);
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .availability-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--card-shadow-hover);
-        }
-
-        .availability-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .availability-card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-        }
-
-        .availability-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-link-large {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            background: var(--background-alt);
-            border: 2px solid var(--border-color);
-            border-radius: 50%;
-            color: var(--text-secondary);
             text-decoration: none;
-            font-size: 1.5rem;
-            transition: var(--transition);
+            border-bottom: 1px solid var(--border-color);
+            transition: border-color 0.2s;
         }
 
-        .social-link-large:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-            transform: translateY(-4px);
-        }
-
-        .copy-email {
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .copy-email:hover {
-            color: var(--primary-dark);
-        }
-
-        @media (max-width: 768px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .page-title {
-                font-size: 2.5rem;
-            }
-
-            .social-links {
-                flex-wrap: wrap;
-            }
+        .contact-value a:hover {
+            border-bottom-color: var(--text-primary);
         }
     </style>
 </head>
@@ -342,8 +155,10 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="page-title" data-translate="contact-title">Get In Touch</h1>
-            <p class="page-subtitle" data-translate="contact-subtitle">Let's discuss AI projects, collaborations, or speaking opportunities</p>
+            <div class="header-content">
+                <h1 class="page-title">Get In Touch</h1>
+                <p class="page-subtitle">Let's discuss AI projects, collaborations, or speaking opportunities</p>
+            </div>
         </div>
     </section>
 
@@ -351,177 +166,51 @@
     <section class="contact-section">
         <div class="container">
             <div class="contact-grid">
-                <!-- Contact Information -->
+                <!-- How can I help section -->
+                <div class="help-section">
+                    <h2>How can I help?</h2>
+                    <p>I'm open to discussing:</p>
+                    <ul>
+                        <li>AI and LLM consulting projects</li>
+                        <li>Building RAG systems and GenAI applications</li>
+                        <li>Data pipeline architecture and implementation</li>
+                        <li>Speaking at conferences or universities</li>
+                        <li>Technical mentoring in AI/ML</li>
+                    </ul>
+                    <p style="margin-top: var(--spacing-md);">
+                        <a href="https://calendly.com/zumaquerodavid/let-s-talk" target="_blank" rel="noopener noreferrer" style="color: var(--text-primary); text-decoration: none; border-bottom: 1px solid var(--border-color); transition: border-color 0.2s;">Book a free call</a> or feel free to reach out to me on:
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
                 <div class="contact-info">
-                    <h2 style="margin-bottom: 2rem; color: var(--text-primary);" data-translate="contact-info-title">Contact Information</h2>
-                    
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 data-translate="contact-email">Email</h3>
-                            <p>
-                                <a href="mailto:zumaquerodavid@gmail.com" class="copy-email" onclick="copyEmail()">
-                                    zumaquerodavid@gmail.com
-                                </a>
-                            </p>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:zumaquerodavid@gmail.com">zumaquerodavid@gmail.com</a>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3 data-translate="contact-location">Location</h3>
-                            <p data-translate="contact-location-value">Berlin, Germany</p>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">
+                            <a href="https://www.linkedin.com/in/davidzuma/" target="_blank" rel="noopener noreferrer">linkedin.com/in/davidzuma</a>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>LinkedIn</h3>
-                            <p>
-                                <a href="https://www.linkedin.com/in/davidzuma/" target="_blank" rel="noopener noreferrer">
-                                    linkedin.com/in/davidzuma
-                                </a>
-                            </p>
+                        <div class="contact-label">GitHub</div>
+                        <div class="contact-value">
+                            <a href="https://github.com/davidzuma" target="_blank" rel="noopener noreferrer">github.com/davidzuma</a>
                         </div>
                     </div>
 
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-github"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>GitHub</h3>
-                            <p>
-                                <a href="https://github.com/davidzuma" target="_blank" rel="noopener noreferrer">
-                                    github.com/davidzuma
-                                </a>
-                            </p>
+                        <div class="contact-label">X (Twitter)</div>
+                        <div class="contact-value">
+                            <a href="https://x.com/zumaquerodavid" target="_blank" rel="noopener noreferrer">@zumaquerodavid</a>
                         </div>
                     </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-x-twitter"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h3>X (Twitter)</h3>
-                            <p>
-                                <a href="https://x.com/zumaquerodavid" target="_blank" rel="noopener noreferrer">
-                                    @zumaquerodavid
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Social Links -->
-                    <div class="social-links">
-                        <a href="mailto:zumaquerodavid@gmail.com" class="social-link-large">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://github.com/davidzuma" class="social-link-large" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/davidzuma/" class="social-link-large" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://x.com/zumaquerodavid" class="social-link-large" target="_blank" rel="noopener noreferrer">
-                            <i class="fab fa-x-twitter"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Contact Methods -->
-                <div class="contact-form">
-                    <h2 style="margin-bottom: 2rem; color: var(--text-primary);" data-translate="contact-methods-title">Let's Connect</h2>
-                    
-                    <!-- Email Section -->
-                    <div class="contact-method">
-                        <div class="method-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="method-content">
-                            <h3 data-translate="contact-email-title">Email Me</h3>
-                            <p data-translate="contact-email-desc">Send me an email for general inquiries, project discussions, or collaboration opportunities.</p>
-                            <a href="mailto:zumaquerodavid@gmail.com" class="contact-method-btn">
-                                <i class="fas fa-envelope"></i>
-                                <span data-translate="contact-email-btn">Send Email</span>
-                            </a>
-                            <div class="email-display">
-                                <code>zumaquerodavid@gmail.com</code>
-                                <button onclick="copyEmail()" class="copy-btn" title="Copy email">
-                                    <i class="fas fa-copy"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Calendly Section -->
-                    <div class="contact-method">
-                        <div class="method-icon">
-                            <i class="fas fa-calendar-check"></i>
-                        </div>
-                        <div class="method-content">
-                            <h3 data-translate="contact-meeting-title">Schedule a Meeting</h3>
-                            <p data-translate="contact-meeting-desc">Book a time that works for both of us to discuss your project, speaking opportunities, or potential collaborations.</p>
-                            <a href="https://calendly.com/zumaquerodavid/let-s-talk" target="_blank" rel="noopener noreferrer" class="contact-method-btn calendly-btn">
-                                <i class="fas fa-calendar-plus"></i>
-                                <span data-translate="contact-meeting-btn">Schedule Meeting</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Availability Section -->
-    <section class="availability-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-translate="contact-help-title">How Can I Help?</h2>
-                <p class="section-subtitle" data-translate="contact-help-subtitle">Areas where I'm available for collaboration</p>
-            </div>
-
-            <div class="availability-grid">
-                <div class="availability-card">
-                    <div class="availability-icon">
-                        <i class="fas fa-handshake"></i>
-                    </div>
-                    <h3 data-translate="contact-collaboration-title">Technical Collaboration</h3>
-                    <p data-translate="contact-collaboration-desc">
-                        Open to collaborating on research projects, open-source contributions, and innovative 
-                        AI applications, especially in education and mathematics.
-                    </p>
-                </div>
-
-                <div class="availability-card">
-                    <div class="availability-icon">
-                        <i class="fas fa-microphone"></i>
-                    </div>
-                    <h3 data-translate="contact-speaking-title">Speaking & Workshops</h3>
-                    <p data-translate="contact-speaking-desc">
-                        Available for conferences, workshops, and technical presentations on AI, machine learning, 
-                        neural networks, and the intersection of mathematics and technology.
-                    </p>
-                </div>
-
-                <div class="availability-card">
-                    <div class="availability-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3 data-translate="contact-mentoring-title">Mentoring</h3>
-                    <p data-translate="contact-mentoring-desc">
-                        Supporting aspiring AI engineers and mathematicians through career guidance, 
-                        technical mentoring, and educational content creation.
-                    </p>
                 </div>
             </div>
         </div>
@@ -534,85 +223,10 @@
                 <div class="footer-text">
                     <p>&copy; 2025 David Zumaquero. All rights reserved.</p>
                 </div>
-                <div class="footer-social">
-                    <a href="mailto:zumaquerodavid@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://github.com/davidzuma" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/davidzuma/" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://x.com/zumaquerodavid" class="social-link">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                </div>
             </div>
         </div>
     </footer>
 
     <script src="js/main.js"></script>
-    <script>
-        // Enhanced copy email functionality
-        function copyEmail() {
-            const email = 'zumaquerodavid@gmail.com';
-            navigator.clipboard.writeText(email).then(function() {
-                // Show success message
-                showNotification('Email copied to clipboard!', 'success');
-            }).catch(function() {
-                // Fallback for older browsers
-                const textArea = document.createElement('textarea');
-                textArea.value = email;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                showNotification('Email copied to clipboard!', 'success');
-            });
-        }
-
-        function showNotification(message, type) {
-            const notification = document.createElement('div');
-            notification.textContent = message;
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                background: ${type === 'success' ? '#22c55e' : '#ef4444'};
-                color: white;
-                padding: 1rem 1.5rem;
-                border-radius: 8px;
-                z-index: 10000;
-                font-weight: 500;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-                animation: slideIn 0.3s ease-out;
-            `;
-            
-            // Add keyframes for animation
-            if (!document.querySelector('#notification-styles')) {
-                const style = document.createElement('style');
-                style.id = 'notification-styles';
-                style.textContent = `
-                    @keyframes slideIn {
-                        from { transform: translateX(100%); opacity: 0; }
-                        to { transform: translateX(0); opacity: 1; }
-                    }
-                `;
-                document.head.appendChild(style);
-            }
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideIn 0.3s ease-out reverse';
-                setTimeout(() => {
-                    if (notification.parentNode) {
-                        document.body.removeChild(notification);
-                    }
-                }, 300);
-            }, 3000);
-        }
-    </script>
 </body>
 </html>
