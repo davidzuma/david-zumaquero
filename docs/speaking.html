@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HET0FR7SJZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HET0FR7SJZ');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speaking & Talks - David Zumaquero</title>
@@ -205,5 +213,52 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <!-- EU Cookie Consent Banner -->
+    <div id="cookieConsent" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(0, 0, 0, 0.9); color: white; padding: 20px; z-index: 9999; font-family: Inter, sans-serif;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px;">
+            <p style="margin: 0; flex: 1; min-width: 250px;">
+                This website uses cookies to analyze traffic and improve your experience. By continuing to use this site, you accept our use of cookies.
+            </p>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="acceptCookies()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: 500;">
+                    Accept
+                </button>
+                <button onclick="declineCookies()" style="background: transparent; color: white; border: 1px solid white; padding: 10px 20px; cursor: pointer; border-radius: 5px; font-weight: 500;">
+                    Decline
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if user has already made a choice
+        function checkCookieConsent() {
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                document.getElementById('cookieConsent').style.display = 'block';
+            } else if (consent === 'declined') {
+                // Disable Google Analytics if declined
+                window['ga-disable-G-HET0FR7SJZ'] = true;
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookieConsent').style.display = 'none';
+            // Enable Google Analytics
+            window['ga-disable-G-HET0FR7SJZ'] = false;
+        }
+
+        function declineCookies() {
+            localStorage.setItem('cookieConsent', 'declined');
+            document.getElementById('cookieConsent').style.display = 'none';
+            // Disable Google Analytics
+            window['ga-disable-G-HET0FR7SJZ'] = true;
+        }
+
+        // Check consent on page load
+        checkCookieConsent();
+    </script>
 </body>
 </html>
