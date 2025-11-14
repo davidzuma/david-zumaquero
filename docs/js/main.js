@@ -155,7 +155,7 @@ const translations = {
         // Hero Section
         'hero-greeting': 'Hi, I\'m',
         'hero-subtitle': 'AI & Data Engineer',
-        'hero-description': 'I build AI systems with Python. Currently working as a freelance AI engineer on LLM applications and data pipelines. I have a math background and like chess. Sometimes I write about neural networks and speak at events.',
+        'hero-description': 'I build AI systems with Python. Currently at EnergyAI Berlin, supporting companies with Data and AI solutions. I have a math background and like chess. Sometimes I write about neural networks and speak at events.',
         'hero-btn-speaking': 'View Speaking',
         'hero-btn-contact': 'Get in Touch',
         
@@ -258,7 +258,7 @@ const translations = {
         // Hero Section
         'hero-greeting': 'Hola, soy',
         'hero-subtitle': 'Ingeniero de IA y Datos',
-        'hero-description': 'Construyo sistemas de IA con Python. Actualmente trabajo como ingeniero de IA freelance en aplicaciones LLM y pipelines de datos. Tengo formación en matemáticas y me gusta el ajedrez. A veces escribo sobre redes neuronales y doy conferencias.',
+        'hero-description': 'Construyo sistemas de IA con Python. Actualmente en EnergyAI Berlin, apoyando a empresas con soluciones de Datos e IA. Tengo formación en matemáticas y me gusta el ajedrez. A veces escribo sobre redes neuronales y doy conferencias.',
         'hero-btn-speaking': 'Ver Conferencias',
         'hero-btn-contact': 'Contactar',
         
