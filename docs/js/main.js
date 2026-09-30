@@ -155,7 +155,7 @@ const translations = {
         // Hero Section
         'hero-greeting': 'Hi, I\'m',
         'hero-subtitle': 'AI & Data Engineer',
-        'hero-description': 'I build AI systems with Python. Currently at EnergyAI Berlin, supporting companies with Data and AI solutions. I have a math background and like chess. Sometimes I write about neural networks and speak at events.',
+        'hero-description': 'I build AI systems with Python. Based in Málaga, Spain. I have a math background and like chess. Sometimes I write about neural networks and speak at events.',
         'hero-btn-speaking': 'View Speaking',
         'hero-btn-contact': 'Get in Touch',
         
@@ -163,7 +163,7 @@ const translations = {
         'about-title': 'About Me',
         'about-subtitle': 'Passionate about turning complex problems into elegant solutions',
         'about-text-1': 'I specialize in building intelligent systems that bridge the gap between cutting-edge AI research and practical business applications. My mathematical background gives me a unique perspective on machine learning algorithms and their real-world implementations.',
-        'about-text-2': 'Currently working as a Freelance AI Engineer at EnergyAI Berlin, where I develop GenAI applications and robust data pipelines. I\'m passionate about RAG systems, agentic AI, and the mathematical foundations that make neural networks so effective.',
+        'about-text-2': 'Based in Málaga, Spain, I develop GenAI applications and robust data pipelines. I\'m passionate about RAG systems, agentic AI, and the mathematical foundations that make neural networks so effective.',
         'stat-experience': 'Years Experience',
         'stat-projects': 'Projects Completed',
         'stat-speaking': 'Speaking Event',
@@ -258,7 +258,7 @@ const translations = {
         // Hero Section
         'hero-greeting': 'Hola, soy',
         'hero-subtitle': 'Ingeniero de IA y Datos',
-        'hero-description': 'Construyo sistemas de IA con Python. Actualmente en EnergyAI Berlin, apoyando a empresas con soluciones de Datos e IA. Tengo formación en matemáticas y me gusta el ajedrez. A veces escribo sobre redes neuronales y doy conferencias.',
+        'hero-description': 'Construyo sistemas de IA con Python. Con base en Málaga, España. Tengo formación en matemáticas y me gusta el ajedrez. A veces escribo sobre redes neuronales y doy conferencias.',
         'hero-btn-speaking': 'Ver Conferencias',
         'hero-btn-contact': 'Contactar',
         
@@ -266,7 +266,7 @@ const translations = {
         'about-title': 'Sobre Mí',
         'about-subtitle': 'Apasionado por convertir problemas complejos en soluciones elegantes',
         'about-text-1': 'Me especializo en construir sistemas inteligentes que conectan la investigación de IA de vanguardia con aplicaciones empresariales prácticas. Mi formación matemática me da una perspectiva única sobre los algoritmos de aprendizaje automático y sus implementaciones del mundo real.',
-        'about-text-2': 'Actualmente trabajo como Ingeniero de IA Freelance en EnergyAI Berlin, donde desarrollo aplicaciones GenAI y pipelines de datos robustos. Me apasionan los sistemas RAG, la IA agéntica y los fundamentos matemáticos que hacen que las redes neuronales sean tan efectivas.',
+        'about-text-2': 'Con base en Málaga, España, desarrollo aplicaciones GenAI y pipelines de datos robustos. Me apasionan los sistemas RAG, la IA agéntica y los fundamentos matemáticos que hacen que las redes neuronales sean tan efectivas.',
         'stat-experience': 'Años de Experiencia',
         'stat-projects': 'Proyectos Completados',
         'stat-speaking': 'Evento de Conferencia',
